@@ -1,12 +1,11 @@
-// /src/pages.js
-
 import React from 'react';
+import Login from './login/login';
 
 /**
  * These are root pages
  */
 const Home = () => {
-  return <h1 className="py-3">Home</h1>;
+  return <Login />;
 };
 
 const Books = () => {
