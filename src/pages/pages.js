@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from './login/login';
+import Datapass from './datapass/datapass';
 
 /**
  * These are root pages
@@ -16,6 +17,10 @@ const Electronics = () => {
   return <h1 className="py-3">Electronics</h1>;
 };
 
+/*const Data = () => {
+  return <h1 className="py-3">Electronics</h1>;
+};*/
+
 /**
  * These are pages nested in Electronics
  */
@@ -31,4 +36,4 @@ const Laptop = () => {
   return <h3>Laptop</h3>;
 };
 
-export { Home, Books, Electronics, Mobile, Desktop, Laptop };
+export { Home, Books, Electronics, Mobile, Desktop, Laptop, Datapass };

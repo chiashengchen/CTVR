@@ -45,11 +45,14 @@ html, body{
   width: 350px;
   height: 50px;
   margin: auto;
+  border-radius: 5px;
   border: 2px solid #DFEBED;
   
   text-align: center;
 }
 .button{
+  width: 350px;
+  height: 50px;
   background-color: #2437A7;
   border-radius: 50px;
   color: #DFEBED;
