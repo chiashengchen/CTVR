@@ -5,7 +5,7 @@ import Datapass from './datapass/datapass';
 /**
  * These are root pages
  */
-const Home = () => {
+const Loginpage = () => {
   return <Login />;
 };
 
@@ -36,4 +36,4 @@ const Laptop = () => {
   return <h3>Laptop</h3>;
 };
 
-export { Home, Books, Electronics, Mobile, Desktop, Laptop, Datapass };
+export { Loginpage, Books, Electronics, Mobile, Desktop, Laptop, Datapass };

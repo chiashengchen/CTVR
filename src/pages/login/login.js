@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './login.png';
 import './login.css';
-import { Button } from 'antd';
+import { Button, Input } from 'antd';
 import { Link } from 'react-router-dom';
 
 //import {AutoComplete} from 'antd';
@@ -12,16 +12,17 @@ function Login() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="container">
-        <form className="box">BOX 範例</form>
-        <br />
+        <h3>ID後六位</h3>
+        <Input className="box"></Input>
+        <h3>登入密碼</h3>
+        <Input className="box"></Input>
+        <h3>記住密碼</h3>
         <Link to="/datapass">
           <Button className="button" onClick={()=>{}}>
-            GET 範例
+            登入
           </Button>
         </Link>
         <br />
-        <h1>H1大小</h1>
-        <h2>H2大小</h2>
         </div>
       </header>
     </div>

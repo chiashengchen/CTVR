@@ -79,7 +79,7 @@ export default class Datapass extends React.Component {
           bordered
           dataSource={deps.map(dep=>
             //<td>{dep.departmentID}</td>
-	    <td>{dep.departmentString}</td>
+	          <div>{dep.departmentString}</div>
             )}
           renderItem={item => (
             <List.Item>
