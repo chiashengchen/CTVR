@@ -1,11 +1,41 @@
 import React from 'react'
-import { Button, List, Typography } from 'antd'
+import { Button, List, Typography, Input } from 'antd'
+//import ModalPage from './modalpage';
+
+const { Search } = Input;
 
 export default class Datapass extends React.Component {
   constructor(props) {
     super(props);
     console.log(this.props);
-    this.state ={deps:[]}
+    this.state ={deps:[]/*, addModalShow : false*/}
+  }
+
+  handleSubmit(event){
+    console.log(event);
+    fetch('http://140.115.54.75:5001/api/values',{
+      method:'POST',
+      headers:{
+        'Accept':'application/json',
+        'Content-Type':'application/json'
+      },
+      /*body:JSON.stringify({
+        departmentID:null,
+        departmentString: event
+      })*/
+      body:event
+    }
+    )
+    .then(res=> res.json())
+    .then((result)=>{
+      alert(result)
+      console.log(result);
+    },
+    (error)=>{
+      alert(error);
+      console.log(error);
+    }
+    )
   }
 
   componentDidMount(){
@@ -21,11 +51,11 @@ export default class Datapass extends React.Component {
     });*/
     
     this.setState({
-      deps:[{"DepartmentID":1,"departmentString":2},
-      {"DepartmentID":1,"departmentString":2},
-      {"DepartmentID":1,"departmentString":2},
-      {"DepartmentID":1,"departmentString":2},
-      {"DepartmentID":12,"departmentString":23}
+      deps:[{"departmentID":1,"departmentString":2},
+      {"departmentID":1,"departmentString":2},
+      {"departmentID":1,"departmentString":2},
+      {"departmentID":1,"departmentString":2},
+      {"departmentID":12,"departmentString":23}
     ]
     })
   
@@ -35,7 +65,7 @@ export default class Datapass extends React.Component {
   
 
   render() {
-
+    //let addModalClose=()=> this.setState({addModalShow : false})
     const {deps}=this.state;
     const { history } = this.props
     return (
@@ -60,6 +90,15 @@ export default class Datapass extends React.Component {
         <Button onClick={() => {
           history.goBack()
         }}>back</Button>
+        <br />
+        {/*input*/}
+        <Search
+          name="departmentID"
+          placeholder="departmentID"
+          enterButton="Search"
+          size="large"
+          onSearch={this.handleSubmit}
+        />
       </div>
     )
   }

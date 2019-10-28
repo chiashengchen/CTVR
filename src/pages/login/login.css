@@ -4,11 +4,11 @@
 
 .App-logo {
   /*height: 40vmin;*/
-  float:right;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  width:700px;
+  /*float:right;*/
+  position: absolute;
+  top:221px;
+  left: 952px;
+  width: 900px;
 }
 
 .App-link {
@@ -31,7 +31,7 @@ html, body{
   font-weight: bold;
 }*/
 .container{
-  position: fixed;
+  position: absolute;
   top:250px;
   left:350px;
   width: 350px;

@@ -13,16 +13,13 @@ function Login() {
         <img src={logo} className="App-logo" alt="logo" />
         <div className="container">
         <form className="box">BOX 範例</form>
+        <br />
         <Link to="/datapass">
           <Button className="button" onClick={()=>{}}>
             GET 範例
           </Button>
         </Link>
-        <Link to="/datapost">
-          <Button className="button" onClick={()=>{}}>
-            POST 範例
-          </Button>
-        </Link>
+        <br />
         <h1>H1大小</h1>
         <h2>H2大小</h2>
         </div>
